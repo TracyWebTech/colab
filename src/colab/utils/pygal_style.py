@@ -9,7 +9,8 @@ CustomLightStyle = Style(
     foreground='rgba(0, 0, 0, 0.7)',
     foreground_light='rgba(0, 0, 0, 0.9)',
     foreground_dark='rgba(0, 0, 0, 0.5)',
-    colors=('#242424', '#9f6767', '#92ac68',
-            '#d0d293', '#9aacc3', '#bb77a4',
-            '#77bbb5', '#777777')
+    colors=('#0f9517', '#3366cc', '#dc3912',
+            '#ff9900', '#990099', '#22aa99',
+            '#aaaa11', '#dd4477', '#316395',
+            '#7A2F16', '#4A0149', '#cccccc')
 )
