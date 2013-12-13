@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-10 16:24+0000\n"
+"POT-Creation-Date: 2013-12-13 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,13 +59,17 @@ msgstr ""
 
 #: accounts/models.py:61
 msgid "Enter a valid username."
-msgstr ""
+msgstr "Entre um nome de usuário válido"
 
-#: accounts/views.py:144
+#: accounts/views.py:96 home/views.py:43
+msgid "No data found"
+msgstr "Nenhum dado encontrado"
+
+#: accounts/views.py:158
 msgid "Your profile has been created!"
 msgstr "Seu perfil foi criado!"
 
-#: accounts/views.py:145
+#: accounts/views.py:159
 msgid ""
 "You must login to validated your profile. Profiles not validated are deleted "
 "in 24h."
@@ -73,12 +77,12 @@ msgstr ""
 "Você deve se logar para validar seu perfil. Perfis não validados serão "
 "deletados em 24h."
 
-#: accounts/views.py:226
+#: accounts/views.py:240
 msgid "Could not change your password. Please, try again later."
 msgstr ""
 "Não conseguimos alterar sua senha. Por favor, tente novamente mais tarde."
 
-#: accounts/views.py:235
+#: accounts/views.py:249
 msgid "You've changed your password successfully!"
 msgstr "Senha alterada com sucesso!"
 
@@ -156,36 +160,36 @@ msgstr "Grupos: "
 msgid "Contributions by Type"
 msgstr "Contribuições por tipo"
 
-#: accounts/templates/accounts/user_detail.html:91
+#: accounts/templates/accounts/user_detail.html:93
 msgid "Participation by Group"
 msgstr "Participação por grupo"
 
-#: accounts/templates/accounts/user_detail.html:104 badger/models.py:70
+#: accounts/templates/accounts/user_detail.html:108 badger/models.py:70
 msgid "Badges"
 msgstr "Medalhas"
 
-#: accounts/templates/accounts/user_detail.html:123
+#: accounts/templates/accounts/user_detail.html:127
 msgid "Latest posted"
 msgstr "Últimas postagens"
 
-#: accounts/templates/accounts/user_detail.html:128
+#: accounts/templates/accounts/user_detail.html:132
 msgid "There are no posts by this user so far."
 msgstr "Não há posts deste usuário até agora."
 
-#: accounts/templates/accounts/user_detail.html:132 templates/home.html:57
-#: templates/home.html.py:76
+#: accounts/templates/accounts/user_detail.html:136 templates/home.html:59
+#: templates/home.html.py:78
 msgid "View more discussions..."
 msgstr "Ver mais discussões..."
 
-#: accounts/templates/accounts/user_detail.html:138
+#: accounts/templates/accounts/user_detail.html:142
 msgid "Other Collaborations"
 msgstr "Outras Colaborações"
 
-#: accounts/templates/accounts/user_detail.html:143
+#: accounts/templates/accounts/user_detail.html:147
 msgid "No contributions of this user so far."
 msgstr "Não há posts deste usuário até agora."
 
-#: accounts/templates/accounts/user_detail.html:147
+#: accounts/templates/accounts/user_detail.html:151
 msgid "View more contributions..."
 msgstr "Ver mais colaborações..."
 
@@ -279,7 +283,7 @@ msgstr "Imagem"
 
 #: badger/forms.py:30
 msgid "You must add an Image"
-msgstr ""
+msgstr "Você deve adicionar uma imagem"
 
 #: badger/models.py:12
 msgid "Greater than or equal"
@@ -1003,15 +1007,15 @@ msgstr "O conteúdo deste site está publicado sob a licença"
 msgid "Creative Commons - attribution, non-commercial"
 msgstr "Creative Commons - atribuição e não-comercial"
 
-#: templates/home.html:17
+#: templates/home.html:18
 msgid "Latest Collaborations"
 msgstr "Últimas Colaborações"
 
-#: templates/home.html:21
+#: templates/home.html:22
 msgid "RSS - Latest collaborations"
 msgstr "RSS - Últimas Colaborações"
 
-#: templates/home.html:30
+#: templates/home.html:31
 msgid "View more collaborations..."
 msgstr "Ver mais colaborações..."
 
@@ -1019,29 +1023,28 @@ msgstr "Ver mais colaborações..."
 msgid "Collaboration Graph"
 msgstr "Gráfico de Colaborações"
 
-#: templates/home.html:45
+#: templates/home.html:47
 msgid "Most Relevant Threads"
 msgstr "Discussões Mais Relevantes"
 
-#: templates/home.html:49
+#: templates/home.html:51
 msgid "RSS - Most Relevant Threads"
 msgstr "RSS - Discussões Mais Relevantes"
 
-#: templates/home.html:64
+#: templates/home.html:66
 msgid "Latest Threads"
 msgstr "Últimas Discussões"
 
-#: templates/home.html:68
+#: templates/home.html:70
 msgid "RSS - Latest Threads"
 msgstr "RSS - Últimas Discussões"
-
-#: templates/pizza-chart.html:26
-msgid "Willing to help"
-msgstr "Vontade de ajudar"
 
 #: templates/includes/big_header.html:9
 msgid "INTERLEGIS COMMUNITIES"
 msgstr "COMUNIDADES INTERLEGIS"
+
+#~ msgid "Willing to help"
+#~ msgstr "Vontade de ajudar"
 
 #~ msgid "Community Blogs"
 #~ msgstr "Blogs da comunidade"
