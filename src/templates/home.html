@@ -2,7 +2,8 @@
 {% load i18n %}
 
 {% block head_js %}
-  {% include "pizza-chart.html" with chart_data=type_count chart_div="collabs" chart_height=330 %}
+  <script type="text/javascript" src="{{ STATIC_URL }}third-party/pygal/js/svg.jquery.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}third-party/pygal/js/pygal-tooltips.js"></script>
 {% endblock %}
 
 {% block header %}
@@ -32,10 +33,11 @@
       <div>&nbsp;</div>
     </div>
 
-
     <div class="col-lg-6 col-md-6">
       <h3 class="column-align">{% trans "Collaboration Graph" %}</h3>
-      <div id="collabs"></div>
+      <div id="collabs" style="width:{{ pie_chart.width }}px; height:{{ pie_chart.height }}px;">
+        <figure>{{ pie_chart.render|safe }}</figure>
+      </div>
     </div>
   </div>
 
