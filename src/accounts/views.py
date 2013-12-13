@@ -2,6 +2,7 @@
 # encoding: utf-8
 
 import datetime
+import pygal
 
 from collections import OrderedDict
 
@@ -20,6 +21,7 @@ from conversejs import xmpp
 from conversejs.models import XMPPAccount
 from haystack.query import SearchQuerySet
 
+from colab.utils.pygal_render import render_pie_chart
 from super_archives.models import EmailAddress, Message
 from super_archives.utils.email import send_email_lists
 from search.utils import trans
@@ -89,7 +91,14 @@ class UserProfileDetailView(UserProfileBaseMixin, DetailView):
                     sqs = sqs.filter_or(type=type, **filter_or)
                 count_types[trans(type)] = sqs.count()
 
-        context['type_count'] = count_types
+        PIE_WIDTH = 350
+        PIE_HEIGHT = 300
+        NO_DATA_TEXT = _(u'No data found')
+
+        context['contributions_chart'] = render_pie_chart(
+            count_types, width=PIE_WIDTH, height=PIE_HEIGHT,
+            no_data_text=NO_DATA_TEXT
+        )
 
         sqs = SearchQuerySet()
         for filter_or in fields_or_lookup:
@@ -103,9 +112,14 @@ class UserProfileDetailView(UserProfileBaseMixin, DetailView):
         context['emails'] = query[:10]
 
         count_by = 'thread__mailinglist__name'
-        context['list_activity'] = dict(messages.values_list(count_by)\
+        list_activity_count = dict(messages.values_list(count_by)\
                                            .annotate(Count(count_by))\
                                            .order_by(count_by))
+
+        context['list_activity_chart'] = render_pie_chart(
+            list_activity_count, width=PIE_WIDTH, height=PIE_HEIGHT,
+            no_data_text=NO_DATA_TEXT
+        )
 
         context.update(kwargs)
         return super(UserProfileDetailView, self).get_context_data(**context)
