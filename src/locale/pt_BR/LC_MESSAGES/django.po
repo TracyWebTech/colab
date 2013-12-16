@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-13 17:48+0000\n"
+"POT-Creation-Date: 2013-12-16 16:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,31 +33,39 @@ msgstr "Datas importantes"
 msgid "Social account does not exist"
 msgstr "Conta social não existe"
 
-#: accounts/forms.py:65
+#: accounts/forms.py:55 accounts/templates/accounts/user_detail.html:69
+msgid "Bio"
+msgstr ""
+
+#: accounts/forms.py:56
+msgid "Write something about you in 200 characters or less."
+msgstr "Escreva algo sobre você em 200 caracteres ou menos."
+
+#: accounts/forms.py:72
 msgid "Mailing lists"
 msgstr "Listas de e-mail"
 
-#: accounts/forms.py:72
+#: accounts/forms.py:79
 msgid "Password"
 msgstr "Senha"
 
-#: accounts/forms.py:74
+#: accounts/forms.py:81
 msgid "Password confirmation"
 msgstr "Confirmação de senha"
 
-#: accounts/forms.py:76
+#: accounts/forms.py:83
 msgid "Enter the same password as above, for verification."
 msgstr "Digite a mesma senha que acima, para verificação."
 
-#: accounts/forms.py:94
+#: accounts/forms.py:101
 msgid "Password mismatch"
 msgstr "Senhas diferentes"
 
-#: accounts/models.py:56
+#: accounts/models.py:59
 msgid "Required. 30 characters or fewer. Letters, digits and ./+/-/_ only."
 msgstr ""
 
-#: accounts/models.py:61
+#: accounts/models.py:64
 msgid "Enter a valid username."
 msgstr "Entre um nome de usuário válido"
 
@@ -148,48 +156,57 @@ msgstr "Conta Twitter"
 msgid "Facebook account"
 msgstr "Conta Facebook"
 
-#: accounts/templates/accounts/user_detail.html:60
+#: accounts/templates/accounts/user_detail.html:57
+#, fuzzy
+msgid "Google talk account"
+msgstr "Conta Facebook"
+
+#: accounts/templates/accounts/user_detail.html:61
+msgid "Identi.ca account"
+msgstr ""
+
+#: accounts/templates/accounts/user_detail.html:65
 msgid "Personal webpage"
 msgstr "Página web pessoal"
 
-#: accounts/templates/accounts/user_detail.html:66
+#: accounts/templates/accounts/user_detail.html:77
 msgid "Groups: "
 msgstr "Grupos: "
 
-#: accounts/templates/accounts/user_detail.html:79
+#: accounts/templates/accounts/user_detail.html:90
 msgid "Contributions by Type"
 msgstr "Contribuições por tipo"
 
-#: accounts/templates/accounts/user_detail.html:93
+#: accounts/templates/accounts/user_detail.html:104
 msgid "Participation by Group"
 msgstr "Participação por grupo"
 
-#: accounts/templates/accounts/user_detail.html:108 badger/models.py:70
+#: accounts/templates/accounts/user_detail.html:119 badger/models.py:70
 msgid "Badges"
 msgstr "Medalhas"
 
-#: accounts/templates/accounts/user_detail.html:127
+#: accounts/templates/accounts/user_detail.html:138
 msgid "Latest posted"
 msgstr "Últimas postagens"
 
-#: accounts/templates/accounts/user_detail.html:132
+#: accounts/templates/accounts/user_detail.html:143
 msgid "There are no posts by this user so far."
 msgstr "Não há posts deste usuário até agora."
 
-#: accounts/templates/accounts/user_detail.html:136 templates/home.html:59
+#: accounts/templates/accounts/user_detail.html:147 templates/home.html:59
 #: templates/home.html.py:78
 msgid "View more discussions..."
 msgstr "Ver mais discussões..."
 
-#: accounts/templates/accounts/user_detail.html:142
+#: accounts/templates/accounts/user_detail.html:153
 msgid "Other Collaborations"
 msgstr "Outras Colaborações"
 
-#: accounts/templates/accounts/user_detail.html:147
+#: accounts/templates/accounts/user_detail.html:158
 msgid "No contributions of this user so far."
 msgstr "Não há posts deste usuário até agora."
 
-#: accounts/templates/accounts/user_detail.html:151
+#: accounts/templates/accounts/user_detail.html:162
 msgid "View more contributions..."
 msgstr "Ver mais colaborações..."
 
@@ -1042,6 +1059,9 @@ msgstr "RSS - Últimas Discussões"
 #: templates/includes/big_header.html:9
 msgid "INTERLEGIS COMMUNITIES"
 msgstr "COMUNIDADES INTERLEGIS"
+
+#~ msgid "Biography"
+#~ msgstr "Biografia"
 
 #~ msgid "Willing to help"
 #~ msgstr "Vontade de ajudar"
